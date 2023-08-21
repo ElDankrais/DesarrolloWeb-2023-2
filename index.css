@@ -1,0 +1,15 @@
+div {
+    margin: 0 100px;
+    color: blueviolet;
+
+}
+
+div:hover {
+    background-color: pink;
+}
+
+ul li:first-child {
+    color: yellow
+}
+
+
