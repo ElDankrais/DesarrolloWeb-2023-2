@@ -1,0 +1,29 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+h1 {
+    text-align: center;
+}
+#container {
+    background-color: #003049;
+    width: 90%;
+    height: 500px;
+    margin: 0 auto;
+    border: 5px solid #003049;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 5px
+}
+
+#container div {
+    width: 100px;
+    height: 100px;
+    flex: 40px 1 0;
+} 
+
+div:nth-of-type(5) {
+    align-self: center;
+    flex-grow: 1;
+}
