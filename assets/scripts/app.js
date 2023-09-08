@@ -32,31 +32,11 @@
 
 // Métodos de String
 
-let stringEjemplo = "Qué bacano sería entregar 20 EP's en desarrollo web."
-console.log(stringEjemplo.length);
+import moment from "moment/moment.js";
+import {dog} from "./object.js";
 
-console.log(stringEjemplo[3]);
-stringEjemplo[-1];
 
-'    omg  '.trim(); // "omg"
-
-// Con argumentos
-
-'spider'.indexOf('i'); //2
-'vesuvius'.indexOf('u'); //3 - only returns FIRST matching index
-'cactus'.indexOf('z'); //-1 not found
-
-console.log(stringEjemplo.includes('sería'));
-console.log('Con el slice ' + stringEjemplo.slice(3));
-console.log(stringEjemplo.slice(0,10));
-console.log(stringEjemplo)
-
-// String Template Literals
-
-const color = 'negro';
-console.log(`Mi color favorito es: ${color}`);
-console.log(`Hay ${60*60*24} segundos en un día`);
-
-//OTROS TEMAS INTERESANTES: Math
+console.log(moment('01/01/2016', 'MM/DD/YYYY'))
 
 console.log(Math.PI);
+console.log(dog);

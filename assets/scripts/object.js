@@ -26,3 +26,5 @@ for (let key in dog) {
 for (let value in Object.values(dog)) {
     console.log(value);
 }
+
+export {dog};

@@ -33,18 +33,18 @@ const delayedColorChange = (newColor, delay, doNext) => {
     }, delay)
 }
 
-// HE AQUÍ EL CALLBACK HELL
-delayedColorChange('red', 1000, () => {
-    delayedColorChange('orange', 1000, () => {
-        delayedColorChange('yellow', 1000, () => {
-            delayedColorChange('green', 1000, () => {
-                delayedColorChange('blue', 1000, () => {
+// // HE AQUÍ EL CALLBACK HELL
+// delayedColorChange('red', 1000, () => {
+//     delayedColorChange('orange', 1000, () => {
+//         delayedColorChange('yellow', 1000, () => {
+//             delayedColorChange('green', 1000, () => {
+//                 delayedColorChange('blue', 1000, () => {
 
-                })
-            })
-        })
-    })
-});
+//                 })
+//             })
+//         })
+//     })
+// });
 
 //SOLUCIÓN: Promesas
 
@@ -84,7 +84,7 @@ fakeRequestCallback('libros.com/page1',
     }
 )
 
-// Promise 
+Promise 
 const fakeRequestPromise = (url) => {
     return new Promise((resolve, reject) => {
         const delay = Math.floor(Math.random() * (4500)) + 500;
@@ -119,23 +119,23 @@ fakeRequestPromise('libros/page1')
 
 // Con nuestra transición
 
-const delayedColorChangePromise = (color, delay) => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            document.body.style.backgroundColor = color;
-            resolve();
-        }, delay)
-    })
-}
+// const delayedColorChangePromise = (color, delay) => {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             document.body.style.backgroundColor = color;
+//             resolve();
+//         }, delay)
+//     })
+// }
 
-// Se ve muy bonito
-delayedColorChangePromise('red', 1000)
-    .then(() => delayedColorChangePromise('orange', 1000))
-    .then(() => delayedColorChangePromise('yellow', 1000))
-    .then(() => delayedColorChangePromise('green', 1000))
-    .then(() => delayedColorChangePromise('blue', 1000))
-    .then(() => delayedColorChangePromise('indigo', 1000))
-    .then(() => delayedColorChangePromise('violet', 1000))
+// // Se ve muy bonito
+// delayedColorChangePromise('red', 1000)
+//     .then(() => delayedColorChangePromise('orange', 1000))
+//     .then(() => delayedColorChangePromise('yellow', 1000))
+//     .then(() => delayedColorChangePromise('green', 1000))
+//     .then(() => delayedColorChangePromise('blue', 1000))
+//     .then(() => delayedColorChangePromise('indigo', 1000))
+//     .then(() => delayedColorChangePromise('violet', 1000))
 
 
 // Con async/await
@@ -155,3 +155,5 @@ async function printRainbow() {
     await rainbow();
     console.log("END OF RAINBOW!")
 }
+
+printRainbow();
